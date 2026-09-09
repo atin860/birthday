@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday! 🎂✨</title>
+  <meta name="description" content="A special digital birthday surprise made with love for my girl best friend." />
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,400;1,600&family=Poppins:wght@300;400;500;600;700&family=Sacramento&display=swap" rel="stylesheet">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="/src/styles/global.css" />
+  <link rel="stylesheet" href="/src/styles/navbar.css" />
+  <link rel="stylesheet" href="/src/styles/hero.css" />
+  <link rel="stylesheet" href="/src/styles/photo.css" />
+  <link rel="stylesheet" href="/src/styles/message.css" />
+  <link rel="stylesheet" href="/src/styles/memories.css" />
+  <link rel="stylesheet" href="/src/styles/qualities.css" />
+  <link rel="stylesheet" href="/src/styles/wish.css" />
+  <link rel="stylesheet" href="/src/styles/music.css" />
+</head>
+<body>
+  <!-- Dynamic Particle Canvas -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Cursor Follow Spotlight (Desktop) -->
+  <div id="cursor-glow"></div>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-brand">
+        <span class="nav-brand-icon">💖</span>
+        <span>Birthday Surprise</span>
+      </a>
+
+      <!-- Desktop Links -->
+      <ul class="nav-links">
+        <li><a href="#hero" class="nav-link active">Home</a></li>
+        <li><a href="#photo" class="nav-link">Photo</a></li>
+        <li><a href="#message" class="nav-link">Message</a></li>
+        <li><a href="#memories" class="nav-link">Memories</a></li>
+        <li><a href="#qualities" class="nav-link">Why You're Special</a></li>
+        <li><a href="#wish" class="nav-link">Wish</a></li>
+      </ul>
+
+      <!-- Mobile Hamburger Toggle Button -->
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <ul class="mobile-menu-links">
+      <li><a href="#hero" class="nav-link mobile-link">Home 🏠</a></li>
+      <li><a href="#photo" class="nav-link mobile-link">Photo 📸</a></li>
+      <li><a href="#message" class="nav-link mobile-link">Message 💌</a></li>
+      <li><a href="#memories" class="nav-link mobile-link">Memories 🖼️</a></li>
+      <li><a href="#qualities" class="nav-link mobile-link">Why You're Special ✨</a></li>
+      <li><a href="#wish" class="nav-link mobile-link">Wish 🎂</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Content Sections -->
+  <main>
+    <!-- SECTION 1: HERO / LANDING -->
+    <section id="hero" class="hero-section">
+      <div class="hero-sparkle hero-sparkle-1">✨</div>
+      <div class="hero-sparkle hero-sparkle-2">💖</div>
+      <div class="hero-sparkle hero-sparkle-3">⭐</div>
+      <div class="hero-sparkle hero-sparkle-4">🌸</div>
+
+      <div class="hero-badge" id="hero-badge">Special Birthday Surprise 💝</div>
+      <h1 class="hero-title" id="hero-title">Happy Birthday, My Best Friend! 🎂✨</h1>
+      <p class="hero-subtitle" id="hero-subtitle">
+        Some people come into your life and quietly make everything a little brighter. You are one of those people.
+      </p>
+      
+      <a href="#photo" class="hero-cta" id="hero-cta">
+        <span>Your Surprise Awaits 💝</span>
+      </a>
+
+      <div class="hero-footer-note" id="hero-made-with-love">
+        Made with <span class="heart">❤️</span> just for you
+      </div>
+    </section>
+
+    <!-- SECTION 2: PHOTO SECTION -->
+    <section id="photo" class="section photo-section">
+      <div class="section-header reveal-on-scroll">
+        <div class="section-badge">Captured Moments ✨</div>
+        <h2 class="section-title">The Favorite Smile</h2>
+      </div>
+
+      <div class="photo-card-wrapper reveal-on-scroll">
+        <!-- Floating Hearts -->
+        <span class="floating-heart heart-top-left">💖</span>
+        <span class="floating-heart heart-top-right">✨</span>
+        <span class="floating-heart heart-bottom-left">🌸</span>
+        <span class="floating-heart heart-bottom-right">💝</span>
+
+        <!-- Photo Card Container -->
+        <div class="photo-card" id="photo-card">
+          <div class="photo-img-container">
+            <img id="main-photo-img" src="" alt="Best Friend Photo" class="photo-img" loading="lazy" />
+          </div>
+          <div class="photo-caption" id="main-photo-caption">
+            The smile that makes everything better ✨
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: PERSONAL BIRTHDAY MESSAGE -->
+    <section id="message" class="section message-section">
+      <div class="message-card reveal-on-scroll">
+        <div class="message-quote-icon">“</div>
+        <div class="message-content" id="message-container">
+          <!-- Paragraphs injected dynamically from config.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: OUR MEMORIES -->
+    <section id="memories" class="section">
+      <div class="section-header reveal-on-scroll">
+        <div class="section-badge">Core Memories 📸</div>
+        <h2 class="section-title">Our Unforgettable Times</h2>
+        <p class="section-subtitle">A collection of random talks, uncontrollable laughter, and favorite moments.</p>
+      </div>
+
+      <div class="memories-grid" id="memories-container">
+        <!-- Memory cards injected dynamically from config.js -->
+      </div>
+    </section>
+
+    <!-- SECTION 5: THINGS I LOVE ABOUT YOU -->
+    <section id="qualities" class="section">
+      <div class="section-header reveal-on-scroll">
+        <div class="section-badge">Reasons You're Special 💖</div>
+        <h2 class="section-title">Things I Love About You</h2>
+        <p class="section-subtitle">Just a few of the countless reasons why you're an amazing friend.</p>
+      </div>
+
+      <div class="qualities-grid" id="qualities-container">
+        <!-- Quality cards injected dynamically from config.js -->
+      </div>
+    </section>
+
+    <!-- SECTION 6: BIRTHDAY WISH / FINAL SECTION -->
+    <section id="wish" class="section wish-section">
+      <div class="wish-container reveal-on-scroll">
+        <h2 class="wish-quote" id="wish-quote">Here's to another beautiful year of YOU. 🥂✨</h2>
+        <p class="wish-subtext" id="wish-subtext">
+          May this year bring you more happiness than you can imagine, more memories than you can count, and countless reasons to smile.
+        </p>
+
+        <!-- Interactive SVG Birthday Cake -->
+        <div id="cake-container"></div>
+
+        <button class="wish-button" id="make-wish-btn">
+          Make a Wish 🎂
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Floating Background Music Player Widget -->
+  <div class="music-widget" id="music-widget" title="Click to play/pause background music">
+    <button class="music-btn" id="music-btn" aria-label="Toggle background music">🎵</button>
+    <div class="equalizer">
+      <div class="eq-bar"></div>
+      <div class="eq-bar"></div>
+      <div class="eq-bar"></div>
+      <div class="eq-bar"></div>
+    </div>
+    <div class="music-label">
+      <span class="music-title" id="music-title-text">Background Music</span>
+      <span class="music-status" id="music-status">Click to play 💖</span>
+    </div>
+  </div>
+
+  <!-- Wish Celebration Modal -->
+  <div class="wish-modal-overlay" id="wish-modal">
+    <div class="wish-modal-card">
+      <div class="wish-modal-icon">🎂✨</div>
+      <h3 class="wish-modal-title" id="modal-title">Wish Made! ✨</h3>
+      <p class="wish-modal-text" id="modal-text">Now go make this year unforgettable. ❤️</p>
+      <button class="wish-modal-close" id="modal-close">Close & Enjoy 💝</button>
+    </div>
+  </div>
+
+  <!-- JS Entry Script -->
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+@import './variables.css';
+
+.music-widget {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.6rem 1.2rem 0.6rem 0.8rem;
+  background: rgba(15, 6, 25, 0.85);
+  backdrop-filter: var(--glass-blur);
+  border: var(--glass-border-pink);
+  border-radius: var(--radius-full);
+  box-shadow: 
+    0 10px 30px rgba(0, 0, 0, 0.5),
+    0 0 20px rgba(255, 117, 140, 0.2);
+  transition: all var(--transition-normal);
+  cursor: pointer;
+  user-select: none;
+}
+
+.music-widget:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 
+    0 15px 35px rgba(0, 0, 0, 0.6),
+    0 0 30px rgba(255, 117, 140, 0.4);
+}
+
+.music-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-pink) 0%, var(--accent-purple) 100%);
+  border: none;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(255, 117, 140, 0.4);
+  transition: transform var(--transition-fast);
+}
+
+.music-widget:hover .music-btn {
+  transform: scale(1.1);
+}
+
+/* Animated Equalizer Waves */
+.equalizer {
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+  height: 18px;
+}
+
+.eq-bar {
+  width: 3px;
+  background: var(--secondary-pink);
+  border-radius: 2px;
+  height: 4px;
+  transition: height 0.2s ease;
+}
+
+.music-widget.playing .eq-bar:nth-child(1) { animation: eqAnimation 1.2s ease-in-out infinite alternate; }
+.music-widget.playing .eq-bar:nth-child(2) { animation: eqAnimation 0.8s ease-in-out infinite alternate 0.2s; }
+.music-widget.playing .eq-bar:nth-child(3) { animation: eqAnimation 1.4s ease-in-out infinite alternate 0.4s; }
+.music-widget.playing .eq-bar:nth-child(4) { animation: eqAnimation 1.0s ease-in-out infinite alternate 0.1s; }
+
+@keyframes eqAnimation {
+  0% { height: 4px; }
+  100% { height: 18px; }
+}
+
+.music-label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  display: flex;
+  flex-direction: column;
+}
+
+.music-title {
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 0.85rem;
+}
+
+.music-status {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}

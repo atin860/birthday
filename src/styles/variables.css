@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,400;1,600&family=Poppins:wght@300;400;500;600;700&family=Sacramento&display=swap');
+
+:root {
+  /* Color Palette */
+  --bg-dark: #0b0410;
+  --bg-dark-secondary: #170726;
+  --bg-gradient: linear-gradient(145deg, #0b0410 0%, #1c072b 40%, #2b0845 75%, #150523 100%);
+  
+  --primary-pink: #ff758c;
+  --secondary-pink: #ff7eb3;
+  --accent-peach: #fda085;
+  --accent-gold: #ffd166;
+  --accent-purple: #7b2cbf;
+  --accent-violet: #9d4edd;
+  
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.85);
+  --text-muted: rgba(255, 255, 255, 0.65);
+  
+  /* Glassmorphism Tokens */
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-bg-hover: rgba(255, 255, 255, 0.09);
+  --glass-border: 1px solid rgba(255, 255, 255, 0.15);
+  --glass-border-pink: 1px solid rgba(255, 117, 140, 0.3);
+  --glass-border-gold: 1px solid rgba(255, 209, 102, 0.3);
+  --glass-blur: blur(16px);
+  --glass-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), 0 5px 15px rgba(0, 0, 0, 0.2);
+  --glass-shadow-glow: 0 10px 30px rgba(255, 117, 140, 0.25);
+  
+  /* Typography */
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-script: 'Sacramento', cursive;
+  
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-spring: 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  
+  /* Border Radius */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-full: 9999px;
+}

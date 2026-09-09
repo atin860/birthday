@@ -1,0 +1,145 @@
+@import './variables.css';
+
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 7rem 1.5rem 4rem;
+  position: relative;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1.4rem;
+  background: rgba(255, 117, 140, 0.12);
+  border: var(--glass-border-pink);
+  border-radius: var(--radius-full);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--secondary-pink);
+  margin-bottom: 2rem;
+  backdrop-filter: var(--glass-blur);
+  box-shadow: 0 4px 20px rgba(255, 117, 140, 0.15);
+  animation: float 4s ease-in-out infinite;
+}
+
+.hero-title {
+  font-family: var(--font-heading);
+  font-size: 2.8rem;
+  font-weight: 900;
+  line-height: 1.2;
+  background: linear-gradient(135deg, #ffffff 0%, #ffe0e9 40%, var(--primary-pink) 70%, var(--accent-gold) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  max-width: 900px;
+  margin: 0 auto 1.5rem;
+  letter-spacing: -0.5px;
+  animation: textGlow 6s ease-in-out infinite;
+}
+
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 4.2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-title {
+    font-size: 5rem;
+  }
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  max-width: 650px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+@media (min-width: 768px) {
+  .hero-subtitle {
+    font-size: 1.3rem;
+  }
+}
+
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1.1rem 2.8rem;
+  background: linear-gradient(135deg, var(--primary-pink) 0%, var(--accent-violet) 100%);
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  box-shadow: 0 10px 30px rgba(255, 117, 140, 0.4);
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  animation: pulseGlow 3s infinite;
+  cursor: pointer;
+}
+
+.hero-cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.7s;
+}
+
+.hero-cta:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 15px 40px rgba(255, 117, 140, 0.6);
+}
+
+.hero-cta:hover::before {
+  left: 100%;
+}
+
+.hero-footer-note {
+  margin-top: 3.5rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  opacity: 0.8;
+}
+
+.hero-footer-note span.heart {
+  color: var(--primary-pink);
+  display: inline-block;
+  animation: heartBeat 1.5s infinite;
+}
+
+@keyframes heartBeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.25); }
+}
+
+/* Floating Sparkle Particles around Hero */
+.hero-sparkle {
+  position: absolute;
+  pointer-events: none;
+  font-size: 1.2rem;
+  opacity: 0.7;
+  animation: float 5s ease-in-out infinite;
+}
+
+.hero-sparkle-1 { top: 20%; left: 15%; animation-delay: 0s; }
+.hero-sparkle-2 { top: 25%; right: 15%; animation-delay: 1.5s; }
+.hero-sparkle-3 { bottom: 25%; left: 20%; animation-delay: 2.5s; }
+.hero-sparkle-4 { bottom: 20%; right: 20%; animation-delay: 3.5s; }
